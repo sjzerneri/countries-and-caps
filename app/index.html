@@ -1,1 +1,28 @@
-hi
+<!DOCTYPE html>
+<html ng-app="cacApp">
+
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Countries And Caps</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="components/cac-app.css" />
+</head>
+
+<body ng-controller="mainController">
+    <div class="container">
+        <h1>Countries And Caps</h1>
+        <p> {{test}} </p>
+        <!-- views -->
+        <div ng-view></div>
+    </div>
+    <!-- scripts -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="components/cac-app.js"></script>
+</body>
+
+</html>
