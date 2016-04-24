@@ -1,0 +1,23 @@
+{
+  "name": "countries-and-caps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp-connect": "^3.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sjzerneri/countries-and-caps.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sjzerneri/countries-and-caps/issues"
+  },
+  "homepage": "https://github.com/sjzerneri/countries-and-caps#readme"
+}
