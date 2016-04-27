@@ -1,0 +1,29 @@
+<div class="countries">
+    <table width="80%">
+        <tr>
+            <th>Name</th>
+            <th>Country Code</th>
+            <th>Capital</th>
+            <th>Area in km2</th>
+            <th>Population</th>
+            <th>Continent</th>
+        </tr>
+        <tr ng-repeat="country in array">
+            <td></td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+        </tr>
+    </table>
+
+    <button ng-click="browseCountries('/')"> Home
+    </button>
+
+
+    <section class="results">
+        <td ng-repeat="country in array" ng-class="country" />
+    </section>
+
+</div>
