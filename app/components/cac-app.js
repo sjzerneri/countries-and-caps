@@ -23,8 +23,10 @@ angular.module('cacApp', ['ngRoute', 'ngAnimate'])
             })
             .then(function (response) {
 
-                console.log(response.data);
-                console.log(response.data.geonames);
+                //console.log(response.data);
+                //console.log(response.data.geonames);
+                $scope.countries = response.data.geonames;
+                console.log($scope.countries);
 
 
             }, function (response) {

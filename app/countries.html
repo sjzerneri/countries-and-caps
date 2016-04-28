@@ -8,13 +8,13 @@
             <th>Population</th>
             <th>Continent</th>
         </tr>
-        <tr ng-repeat="country in array">
-            <td></td>
-            <td>Test</td>
-            <td>Test</td>
-            <td>Test</td>
-            <td>Test</td>
-            <td>Test</td>
+        <tr ng-repeat="country in countries">
+            <td> {{ country.countryName }} </td>
+            <td> {{ country.countryCode }}</td>
+            <td> {{ country.capital }}</td>
+            <td> {{ country.areaInSqKm }}</td>
+            <td> {{ country.population }}</td>
+            <td> {{ country.continent }}</td>
         </tr>
     </table>
 
