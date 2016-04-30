@@ -9,21 +9,17 @@
             <th>Continent</th>
         </tr>
         <tr ng-repeat="country in countries">
-            <td> {{ country.countryName }} </td>
-            <td> {{ country.countryCode }}</td>
-            <td> {{ country.capital }}</td>
-            <td> {{ country.areaInSqKm }}</td>
-            <td> {{ country.population }}</td>
-            <td> {{ country.continent }}</td>
+            <td>
+                <a ng-bind="country.countryName" ng-href="#/countries/{{country.countryCode}}"></a>
+            </td>
+            <td ng-bind="country.countryCode"></td>
+            <td ng-bind="country.capital"></td>
+            <td ng-bind="country.areaInSqKm"></td>
+            <td ng-bind="country.population"></td>
+            <td ng-bind="country.continent"></td>
         </tr>
     </table>
 
     <button ng-click="browseCountries('/')"> Home
     </button>
-
-
-    <section class="results">
-        <td ng-repeat="country in array" ng-class="country" />
-    </section>
-
 </div>
