@@ -1,10 +1,10 @@
-<div class="detail" ng-repeat="detail in countryDetails">
+<div class="detail">
 
-    <h2> {{detail.countryName}} </h2>
+    <h2 ng-bind="vm.country.countryName"> </h2>
 
-    <h3> Population: {{detail.population}} </h3>
-    <h3> Area: {{detail.areaInSqKm}} </h3>
-    <h3> Capital: {{detail.capital}} </h3>
+    <h3> {{ vm.country.continent }} </h3>
+    <h3> {{ vm.country.population.areaInSqKm}} </h3>
+    <h3> {{ vm.country.capital }} </h3>
     <h3> Population Of Capital: fill in </h3>
     <h3> 3 neighbors: fill in </h3>
 

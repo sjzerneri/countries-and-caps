@@ -1,19 +1,23 @@
 angular.module('cacApp')
-    .factory('countrydetails', function ($http, $routeParams) {
-        function getDetails(countryCode) {
+    .factory('countrydetails', function ($http, $routeParams, $q) {
 
-            return $http.get('http://api.geonames.org/countryInfoJSON?username=steveyz&country=US')
-                .then(function (response) {
+        var baseUrl = 'http://api.geonames.org';
+        var username = 'steveyz';
 
-                    return response.data.geonames;
+        function countryDetails(countryCode) {
+            var config = {
+                params: {
+                    username: username,
+                    country: countryCode
+                }
+            };
 
-
-                }, function (response) {
-                    console.log('Detail Response Failed');
+            return $http.get(baseUrl + '/countryInfoJSON', config)
+                .then(function (res) {
+                    return $q.when(res.data.geonames[0]);
                 });
         }
         return {
-            getDetails: getDetails
+            countryDetails: countryDetails
         }
-
-    })
+    });
