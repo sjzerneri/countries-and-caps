@@ -1,11 +1,11 @@
 <div class="detail">
 
-    <h2 ng-bind="vm.country.countryName"> </h2>
+    <h2 ng-bind="country.countryName"> </h2>
 
-    <h3> {{ vm.country.continent }} </h3>
-    <h3> {{ vm.country.population.areaInSqKm}} </h3>
-    <h3> {{ vm.country.capital }} </h3>
-    <h3> Population Of Capital: fill in </h3>
+    <h3> Population Of Country: {{ country.population }} </h3>
+    <h3> Area: {{ country.areaInSqKm}} </h3>
+    <h3> Capital: {{ country.capital }} </h3>
+    <h3> Population Of Capital: {{ capitalAndNeighbors.population }}</h3>
     <h3> 3 neighbors: fill in </h3>
 
     <p> Insert country map and flag </p>
