@@ -32,8 +32,24 @@ angular.module('cacApp')
                 });
         }
 
+        function neighbors(geonameId) {
+            var config = {
+                params: {
+                    username: username,
+                    geonameId: geonameId
+
+                }
+            };
+
+            return $http.get(baseUrl + '/neighboursJSON?', config)
+                .then(function (res) {
+                    return $q.when(res.data);
+                });
+        }
+
         return {
             countryDetails: countryDetails,
-            search: search
+            search: search,
+            neighbors: neighbors
         }
     });

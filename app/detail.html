@@ -5,8 +5,12 @@
     <h3> Population Of Country: {{ country.population }} </h3>
     <h3> Area: {{ country.areaInSqKm}} </h3>
     <h3> Capital: {{ country.capital }} </h3>
-    <h3> Population Of Capital: {{ capitalAndNeighbors.population }}</h3>
-    <h3> 3 neighbors: fill in </h3>
+    <h3> Population Of Capital: {{ search.population }}</h3>
+    <h3> Neighbors: </h3>
+    <div class="neighbors" ng-repeat="neighbor in neighbors">
+        <h4 ng-bind="neighbor.countryName"> </h4>
+    </div>
+
 
     <p> Insert country map and flag </p>
 

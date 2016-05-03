@@ -13,12 +13,12 @@ angular.module('cacApp')
             .then(function (response) {
                 $scope.country = response;
                 return $q.all([
-                    countrydetails.search($scope.country.capital)
+                    countrydetails.search($scope.country.capital),
+                    countrydetails.neighbors($scope.country.geonameId)
                     ]);
             }).then(function (response) {
-                $scope.capitalAndNeighbors = response[0];
-                console.log($scope.capitalAndNeighbors);
+                $scope.search = response[0];
+                $scope.neighbors = response[1].geonames;
+                console.log($scope.neighbors);
             })
-
-
     });
