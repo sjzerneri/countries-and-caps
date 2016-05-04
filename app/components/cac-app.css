@@ -35,7 +35,9 @@ General styles (General Module, wrapping around the modules bellow)
 (the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li))
 */
 
-body {}
+body {
+    font-family: 'Quicksand', sans-serif;
+}
 
 h1 {
     text-align: center;
@@ -64,6 +66,22 @@ td {
     text-align: center;
 }
 
+table,
+th,
+td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+table tr:nth-child(odd) {
+    background-color: #f1f1f1;
+}
+
+table tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
 
 /* -------------------------------------
 Header styles (Main Module)
@@ -84,6 +102,33 @@ Content styles (Main Module)
 .countries {
     text-align: center;
     margin-top: 10rem;
+}
+
+.detail {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 8rem;
+}
+
+.detailButtons {
+    text-align: center;
+}
+
+.imageHolder {
+    text-align: center;
+}
+
+.detail-img {
+    display: inline-block;
+    height: 14rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+}
+
+.detail-title {
+    text-align: center;
+    font-size: 6rem;
 }
 
 

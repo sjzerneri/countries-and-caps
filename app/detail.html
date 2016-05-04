@@ -1,25 +1,32 @@
 <div class="detail">
 
-    <h2 ng-bind="country.countryName"> </h2>
+    <h2 class="detail-title" ng-bind="country.countryName"> </h2>
 
-    <h3> Population Of Country: {{ country.population }} </h3>
-    <h3> Area: {{ country.areaInSqKm}} </h3>
-    <h3> Capital: {{ country.capital }} </h3>
-    <h3> Population Of Capital: {{ search.population }}</h3>
-    <h3> Neighbors: </h3>
+
+    <div class="imageHolder">
+        <img class="detail-img" ng-src="http://www.geonames.org/flags/x/{{code | lowercase}}.gif" />
+        <img class="detail-img" id='myImage' src="http://www.geonames.org/img/country/250/{{code}}.png" />
+    </div>
+
+    <h3> Population Of Country</h3>
+    <h4 ng-bind="country.population | number" </h4>
+    <h3> Area</h3>
+    <h4 ng-bind="country.areaInSqKm | number" </h4>
+    <h3> Capital</h3>
+    <h4 ng-bind="country.capital" </h4>
+    <h3> Population Of Capital</h3>
+    <h4 ng-bind="country.population | number" </h4>
+    <h3> Neighbors </h3>
     <div class="neighbors" ng-repeat="neighbor in neighbors">
         <h4 ng-bind="neighbor.countryName"> </h4>
     </div>
 
-    <p> {{countryCode}}</p>
-    <div>
-        <img ng-src="http://www.geonames.org/flags/x/{{code | lowercase}}.gif" />
-        <img id='myImage' src="http://www.geonames.org/img/country/250/{{code}}.png" />
-
+    <div class="detailButtons">
+        <button ng-click="browseCountries('/')"> Home
+        </button>
+        <button ng-click="browseCountries('/countries')"> Browse Countries
+        </button>
     </div>
 
-    <button ng-click="browseCountries('/')"> Home
-    </button>
-    <button ng-click="browseCountries('/countries')"> Browse Countries
-    </button>
+
 </div>
