@@ -7,20 +7,25 @@ angular.module('cacApp')
                 $location.path(path);
             };
 
-        var countryCode = $routeParams.countryCode;
+        var vm = this;
+
+        vm.countryCode = $routeParams.countryCode;
+
+        vm.country = {};
 
         $scope.code = $routeParams.countryCode;
 
-        countrydetails.countryDetails(countryCode)
+        countrydetails.countryDetails(vm.countryCode)
             .then(function (response) {
-                $scope.country = response;
+                vm.country = response;
                 return $q.all([
-                    countrydetails.search($scope.country.capital),
-                    countrydetails.neighbors($scope.country.geonameId)
+                    countrydetails.search(vm.country.capital),
+                    countrydetails.neighbors(vm.country.geonameId)
                     ]);
             }).then(function (response) {
-                $scope.search = response[0];
-                $scope.neighbors = response[1].geonames;
+                vm.country.search = response[0];
+                vm.country.neighbors = response[1].geonames;
+                console.log(vm.country.neighbors);
             })
 
     });

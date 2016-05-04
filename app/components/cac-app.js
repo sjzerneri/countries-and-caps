@@ -10,6 +10,7 @@ angular.module('cacApp', ['ngRoute', 'ngAnimate'])
             })
             .when('/countries/:countryCode', {
                 templateUrl: 'detail.html',
-                controller: 'detailController'
+                controller: 'detailController',
+                controllerAs: 'vm'
             })
     })

@@ -9,15 +9,15 @@
     </div>
 
     <h3> Population Of Country</h3>
-    <h4 ng-bind="country.population | number" </h4>
+    <h4 ng-bind="vm.country.population | number" </h4>
     <h3> Area</h3>
-    <h4 ng-bind="country.areaInSqKm | number" </h4>
+    <h4 ng-bind="vm.country.areaInSqKm | number" </h4>
     <h3> Capital</h3>
-    <h4 ng-bind="country.capital" </h4>
+    <h4 ng-bind="vm.country.capital" </h4>
     <h3> Population Of Capital</h3>
-    <h4 ng-bind="country.population | number" </h4>
+    <h4 ng-bind="vm.country.population | number" </h4>
     <h3> Neighbors </h3>
-    <div class="neighbors" ng-repeat="neighbor in neighbors">
+    <div class="neighbors" ng-repeat="neighbor in vm.country.neighbors">
         <h4 ng-bind="neighbor.countryName"> </h4>
     </div>
 
