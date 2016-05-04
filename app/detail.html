@@ -11,8 +11,12 @@
         <h4 ng-bind="neighbor.countryName"> </h4>
     </div>
 
+    <p> {{countryCode}}</p>
+    <div>
+        <img ng-src="http://www.geonames.org/flags/x/{{code | lowercase}}.gif" />
+        <img id='myImage' src="http://www.geonames.org/img/country/250/{{code}}.png" />
 
-    <p> Insert country map and flag </p>
+    </div>
 
     <button ng-click="browseCountries('/')"> Home
     </button>

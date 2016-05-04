@@ -9,6 +9,8 @@ angular.module('cacApp')
 
         var countryCode = $routeParams.countryCode;
 
+        $scope.code = $routeParams.countryCode;
+
         countrydetails.countryDetails(countryCode)
             .then(function (response) {
                 $scope.country = response;
@@ -19,6 +21,6 @@ angular.module('cacApp')
             }).then(function (response) {
                 $scope.search = response[0];
                 $scope.neighbors = response[1].geonames;
-                console.log($scope.neighbors);
             })
+
     });
