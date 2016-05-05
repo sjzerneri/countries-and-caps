@@ -1,3 +1,4 @@
+(function(){
 angular.module('cacApp')
     .controller('mainController', function ($scope, $location, geonames) {
         $scope.test = "Testing...";
@@ -14,3 +15,4 @@ angular.module('cacApp')
                 console.log($scope.countries);
             })
     })
+}());

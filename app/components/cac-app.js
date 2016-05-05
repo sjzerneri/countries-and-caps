@@ -1,3 +1,5 @@
+(function(){
+
 angular.module('cacApp', ['ngRoute', 'ngAnimate'])
     .config(function ($routeProvider) {
         $routeProvider.when('/', {
@@ -12,5 +14,7 @@ angular.module('cacApp', ['ngRoute', 'ngAnimate'])
                 templateUrl: 'detail.html',
                 controller: 'detailController',
                 controllerAs: 'vm'
-            })
-    })
+            });
+    });
+
+}());

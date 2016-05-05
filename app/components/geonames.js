@@ -1,3 +1,4 @@
+(function(){
 angular.module('cacApp')
     .factory('geonames', function ($http) {
         function countries() {
@@ -17,3 +18,4 @@ angular.module('cacApp')
             countries: countries
         }
     })
+}());
