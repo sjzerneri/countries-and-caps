@@ -1,5 +1,5 @@
-angular.module('cacApp')
-    .factory('countrydetails', function ($http, $routeParams, $q) {
+(function(){
+angular.module('cacApp').factory('countrydetails', function ($http, $routeParams, $q) {
 
         var baseUrl = 'http://api.geonames.org';
         var username = 'steveyz';
@@ -53,3 +53,4 @@ angular.module('cacApp')
             neighbors: neighbors
         }
     });
+}());

@@ -1,3 +1,4 @@
+(function(){
 angular.module('cacApp')
     .controller('detailController', function ($scope, $location, countrydetails, $routeParams, $q) {
 
@@ -29,3 +30,4 @@ angular.module('cacApp')
             })
 
     });
+}());
