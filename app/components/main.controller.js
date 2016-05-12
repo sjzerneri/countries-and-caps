@@ -10,6 +10,8 @@
             geonames.countries()
                 .then(function (response) {
                     $scope.countries = response;
+                    console.log($scope.countries);
+                    console.log($scope.countries.length);
                 })
         })
 }());

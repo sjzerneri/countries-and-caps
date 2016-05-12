@@ -7,7 +7,9 @@ describe("detailController", function () {
         _scope = $injector.get("$rootScope").$new();
         _routeParams = $injector.get("$routeParams");
         _q = $injector.get("$q");
-        $controller('detailController', {
+
+        var vm;
+        vm.$controller('detailController', {
             $scope: _scope,
             $location: _location,
             geonames: _geonames,
@@ -16,7 +18,7 @@ describe("detailController", function () {
         })
     }))
 
-    it('should set code equal to the routeParams country code', function () {
-        expect(_scope.code).toEqual(_routeParams.countryCode);
-    })
+
+    //what if geonames.countries resolves, or what if it rejects
+    // should contry details be passed a parameter.
 })
