@@ -2,19 +2,17 @@
     angular.module('cacApp')
         .controller('detailController', function ($scope, $location, $routeParams, $q, geonames) {
 
-            $scope.browseCountries =
+            var vm = this;
+
+            vm.browseCountries =
 
                 function (path) {
                     $location.path(path);
                 };
 
-            var vm = this;
-
             vm.countryCode = $routeParams.countryCode;
 
             vm.country = {};
-
-            $scope.code = $routeParams.countryCode;
 
             geonames.countryDetails(vm.countryCode)
                 .then(function (response) {

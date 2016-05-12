@@ -4,8 +4,8 @@
 
 
     <div class="imageHolder">
-        <img class="detail-img" ng-src="http://www.geonames.org/flags/x/{{code | lowercase}}.gif" />
-        <img class="detail-img" id='myImage' src="http://www.geonames.org/img/country/250/{{code}}.png" />
+        <img class="detail-img" ng-src="http://www.geonames.org/flags/x/{{vm.countryCode | lowercase}}.gif" />
+        <img class="detail-img" id='myImage' src="http://www.geonames.org/img/country/250/{{vm.countryCode}}.png" />
     </div>
 
     <h3> Population Of Country</h3>
@@ -22,9 +22,9 @@
     </div>
 
     <div class="detailButtons">
-        <button ng-click="browseCountries('/')"> Home
+        <button ng-click="vm.browseCountries('/')"> Home
         </button>
-        <button ng-click="browseCountries('/countries')"> Browse Countries
+        <button ng-click="vm.browseCountries('/countries')"> Browse Countries
         </button>
     </div>
 
