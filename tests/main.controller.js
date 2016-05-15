@@ -29,12 +29,10 @@ describe("mainController", function () {
     it("should equal a length of 250", function () {
         var url = 'http://api.geonames.org/countryInfoJSON?username=steveyz';
         var httpResponse = {
-            data: {
-                geonames: []
-            }
+            geonames: []
         };
         httpBackend.expectGET(url).respond(200, httpResponse);
-        expect(_scope.countries.length).toBe(250);
         httpBackend.flush();
+        expect(_scope.countries.length).toBe(0);
     })
 })
